@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html>
+	<head>
+		<script>
+			
+			
+			function suma(a, b) {
+				var resultado = a + b;
+				
+				function manipular() {
+					console.log('manipular Antes: ' + resultado);
+					resultado = resultado * 2;
+					console.log('manipular Despu1s: ' + resultado);
+				}
+				
+				manipular();
+				return resultado;
+			}
+			
+			var s1 = suma(1, 2);
+			console.log(s1);
+			var s2 = suma(2, 3);
+			console.log(s2);
+			
+			
+			console.log('Fin.');
+		</script>
+	
+	</head>
+	<body>
+		
+		<h1>Disney.com</h1>
+		
+		<a id="linkDisney" href="http://www.disney.com">Disney</a>
+	
+		<p id="descripcion">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus ipsum ut lorem vestibulum sed pretium elit dictum. Nunc vitae felis ligula. Nam vel metus ut orci porta tincidunt at eget libero. Quisque ut blandit neque. Vivamus ut est elit, id aliquam nisl. Morbi blandit.
+		</p>
+
+		
+		
+	</body>
+</html>

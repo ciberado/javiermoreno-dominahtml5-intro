@@ -1,0 +1,82 @@
+﻿ <!DOCTYPE html>
+ 
+ 
+ <html>
+ 	<head>
+ 		<title>Demo Formulario HTML 5</title>
+		
+ 	</head>
+ 	<body>
+ 		<h1>Form html5</h1>
+ 		<p>Blah</p>
+ 		<form action="http://www.disney.com">
+		Obligatario:
+			<input name="campoObligatorio"
+				   type="text"
+					   required />
+			<br/>
+			Email:
+			<input type="email" name="correo"
+				   validationMessage="Ey, tipo. Escribe bien"
+					   />
+			<br/>
+			Teléfono:
+			<input type="tel" placeholder="ej: 555 8432"
+							  pattern="^\d{3} \d{4}$" />
+			<br/>
+			Número:
+			<input type="number" step="1" min="-5" max="10"/>
+			<br/>
+			Meter:
+			<meter min="0" max="100" low="20" high="90"
+				   optimum="50" value="50">50 sobre 100</meter>
+			<br/>
+			Progress:
+			<progress max="100" value="50">Cargando...</progress>
+			<br/>
+		   
+			Search:
+			<input type="search" placeholder="Término a buscar"
+				   results="10" />
+		   
+			<input type="submit" name="aceptar"
+				   value="Aceptar" />
+		   
+			<input type="submit" name="cancelar"
+				   value="cancelar" formnovalidate/>
+				   
+			<input type="button" value="Validar correo"
+                   onclick="revisarCorreo();" />			
+		</form>
+		
+		<script>
+		// Ignora este javascript a partir de la tercera
+		// sesión del curso.
+		function revisarCorreo() {
+			var formulario = document.forms[0];
+			var correoElem = formulario.correo;
+			var validacionCorreo = correoElem.validity;
+			window.alert(validacionCorreo.valid);
+		}
+		
+			
+			
+			
+		
+		</script>
+		
+
+		
+ 	</body>
+ </html>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

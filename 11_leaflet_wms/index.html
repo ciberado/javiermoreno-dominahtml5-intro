@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charser="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<style>
+			body {
+				padding : 0;
+				margin : 0;
+			}
+			
+			html, body, #mapa {
+				height : 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mapa"></div>
+		
+		
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+		<!--[if lte IE 8]>
+			<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+		<![endif]-->	
+		<script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+
+		<script>
+			var mapa = L.map('mapa', {
+				center : new L.LatLng(41.382, 2.152), // [41.382, 2.152]
+				zoom : 12,
+				crs  : L.CRS.EPSG4326
+			});
+			
+			L.tileLayer.wms('http://shagrat.icc.es/lizardtech/iserv/ows', {
+				layers : 'orto5m',
+				styles : '',
+				format : 'image/jpeg',
+				transparent : true,
+				attribution : 'ICC',
+				version : '1.1.0'
+			}).addTo(mapa);
+			
+			
+			
+		</script>
+			
+			
+	</body>
+</html>
+
+
+
+
+
+
+

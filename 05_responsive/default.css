@@ -1,0 +1,128 @@
+﻿@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster'), url(http://themes.googleusercontent.com/static/fonts/lobster/v5/MWVf-Rwh4GLQVBEwbyI61Q.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Cabin Medium'), local('Cabin-Medium'), url(http://themes.googleusercontent.com/static/fonts/cabin/v4/km2iCywk7CnC11BE8pBNVPesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
+
+/* Normalización. */
+
+* {
+	margin: 0;
+	padding : 0;
+}
+
+body {
+	font-family: 'Cabin', sans-serif;
+}
+
+img, video, audio {
+	max-width : 100%;
+}
+
+h1, h2 {
+	font-family: 'Lobster', cursive;
+}
+
+div#content {
+	width : 100%;
+}
+
+header {
+	text-align : center;
+}
+
+nav ul#main-menu li a {
+	padding-top : 0.5em;
+	padding-bottom : 0.5em;
+	display : block;	
+	text-decoration : none;
+	font-weight : bold;
+	background-color : #000;
+	color : white;
+}
+
+p {
+	text-align : justify;
+}
+
+
+@media (min-width : 60em) {
+
+	body {
+	}
+	
+	h2 {
+		text-align : center;
+		margin : 0.5em 0 0.5em 0;
+	}
+	
+	div#content {
+		max-width : 60em;
+	    margin: auto;
+	}
+	
+	 a#logo {
+			float : left;
+			margin-top: 1em;       
+			margin-bottom: 1em;    
+	 }
+	 
+	 nav ul#main-menu {
+			margin-top: 1em;       
+			margin-bottom: 1em;    
+			float : right;
+	 }
+	 
+	 nav ul#main-menu li {
+			list-style : none;
+			display : inline;
+			float : left;
+	 }
+
+	nav ul#main-menu li a {
+			padding: 1.5em 1.5em;		   
+	}	
+
+	nav ul#main-menu li:first-child a {
+		border-top-left-radius:1em;
+		border-bottom-left-radius:1em;	
+	}
+
+
+	section#features div.item {
+		float : left;
+		width : 18em;
+		margin-left : 1em;
+		margin-right : 1em;
+	}
+	
+}
+
+@media (min-width : 96em) {
+	
+	div#content {
+		max-width : 60em;
+		font-size : 1.6em;
+	
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+

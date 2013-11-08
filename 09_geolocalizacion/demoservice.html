@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+		<script src="TimeZoneService.js"></script>
+		<script>
+			var tzServ = new TimeZoneService();
+			tzServ.obtenerHoraHome(function(infoHora) {
+				console.log(infoHora.hora + ':' + infoHora.minuto);
+			});
+		</script>
+		
+		
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+		<script src="PronosticoService.js"></script>
+		<script>
+			var prService = new PronosticoService();
+			prService.obtenerPronostico(42.8748, -8.5507, function(pronostico) {
+				console.log(JSON.stringify(pronostico));
+			});
+		</script>
+		
+		<script src="http://www.movable-type.co.uk/scripts/latlon.js"></script>
+		<script src="FotoService.js" ></script>
+		<script>
+			var foService = new FotoService();
+			foService.obtenerFotosPorLatLon(42.85, -8.58, 1.0, function(fotos) {
+				console.log('Fotos: ' + JSON.stringify(fotos));
+			});
+		</script>	
+	       
+		
+	</head>
+	<body>
+		<h1>Demo ajax</h1>
+		
+
+	</body>
+</html>

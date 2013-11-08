@@ -1,0 +1,59 @@
+﻿ <!DOCTYPE html>
+<html>
+        <head></head>
+        <body>
+                <nav>
+                        <ol class="menu">
+                                <li>Navegación 1</li>
+                                <li>Navegación 2</li>
+                                <li>Navegación 3</li>
+                                <li>Navegación 4</li>
+                        </ol>
+                </nav>
+                <hgroup>
+                        <h1>Formularios</h1>
+                        <h2>html5 power</h2>
+                </hgroup>
+                <p>Lorem ipsum dolor sit amet, hola mundo vestrum appellas fortunae civitatem auri in fuerat est se ad quia ad te in deinde cupis hominem armatis exanimem scientiam pervenisset afferte Apollonius ut sua etiam esse in fuerat accidens quam aniculae morsque nutricem rex</p>
+               
+                <form  action="http://www.disney.com">
+                        Obligatario:
+                        <input name="campoObligatorio"
+                               type="text"
+                                   required />
+                        <br/>
+                        Email:
+                        <input type="email" name="correo"
+                               validationMessage="Ey, tipo. Escribe bien"
+                                   />
+                        <br/>
+                        Teléfono:
+                        <input type="tel" placeholder="ej: 555 8432"
+                                          pattern="^\d{3} \d{4}$" />
+                        <br/>
+                        Número:
+                        <input type="number" step="1" min="-5" max="10"/>
+                        <br/>
+                        Meter:
+                        <meter min="0" max="100" low="20" high="90"
+                               optimum="50" value="50">50 sobre 100</meter>
+                        <br/>
+                        Progress:
+                        <progress max="100" value="50">Cargando...</progress>
+                        <br/>
+                       
+                        Search:
+                        <input type="search" placeholder="Término a buscar"
+                               results="10" />
+                       
+                        <input type="submit" name="aceptar"
+                               value="Aceptar" />
+                       
+                        <input type="submit" name="cancelar"
+                               value="cancelar" formnovalidate/>
+                       
+                </form>
+               
+       
+        </body>
+</html>

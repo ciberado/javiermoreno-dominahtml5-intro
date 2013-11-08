@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+
+<html>
+	<head>
+		<script>
+			function Controlador() {
+				var self = this;
+				var elemComando = document.getElementById('comando');
+				elemComando.addEventListener('click', function() {
+					self._cambiarColor();
+				});
+			}
+			
+			Controlador.prototype.color = 'red';
+			
+			Controlador.prototype._cambiarColor = function() {
+				var elemDesc = document.getElementById('descripcion');
+				elemDesc.style.color = this.color;
+			}
+			
+			window.addEventListener('load', function() {
+				new Controlador();
+			});
+
+			/*
+			window.onload = function() {
+				new Controlador();
+			}
+			*/
+			
+			
+		</script>
+	
+	</head>
+	<body>
+		
+		<h1>Disney.com</h1>
+		
+		<a id="linkDisney" href="http://www.disney.com">Disney</a>
+	
+		<p id="descripcion">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus ipsum ut lorem vestibulum sed pretium elit dictum. Nunc vitae felis ligula. Nam vel metus ut orci porta tincidunt at eget libero. Quisque ut blandit neque. Vivamus ut est elit, id aliquam nisl. Morbi blandit.
+		</p>
+
+		<input type="button" id="comando" value="Púlsame"/>
+		
+	</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html>
+	<head>
+		<script>
+		
+			String.prototype.capitalizar = function() {
+				return this.charAt(0).toUpperCase() + this.substring(1);
+			}
+			
+			Object.prototype.rabbid = function() {
+				alert('WRAAAAAAAAAAACKAAAAA!!!');
+			}
+			
+			alert('hola'.capitalizar());
+			
+			
+		
+			function Persona(nombre, apellidos, nif) {
+				console.debug(this);
+				this.nombre = nombre || Persona.prototype.nombre;
+				this.apellidos = apellidos || Persona.prototype.apellidos;
+				this.nif = nif || Persona.prototype.nif;
+			}
+
+			Persona.NIF_DESCONOCIDO = '00000000A';
+			
+			Persona.prototype.nombre = null;
+			Persona.prototype.apellidos = null;
+			Persona.prototype.nif = Persona.NIF_DESCONOCIDO;
+			Persona.prototype.fechaNacimiento = null;
+			
+			Persona.prototype.informe = function() {
+				return this.nombre + ', ' +
+					   this.apellidos + ', ' + 
+					   this.nif;
+			}
+			
+			var per1 = new Persona('Alice', 'Wonderland', '01234567A');
+			console.log('********************');
+			console.log(per1.nombre);
+			console.log(per1.constructor);
+			console.log(per1.__proto__);
+			console.log(per1.informe());
+			
+			console.log('********************');
+			var per2 = new Persona('Bob');
+			console.log(per2.nif);
+			
+			
+		</script>
+	
+	</head>
+	<body>
+		
+		<h1>Disney.com</h1>
+		
+		<a id="linkDisney" href="http://www.disney.com">Disney</a>
+	
+		<p id="descripcion">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus ipsum ut lorem vestibulum sed pretium elit dictum. Nunc vitae felis ligula. Nam vel metus ut orci porta tincidunt at eget libero. Quisque ut blandit neque. Vivamus ut est elit, id aliquam nisl. Morbi blandit.
+		</p>
+
+		
+		
+	</body>
+</html>

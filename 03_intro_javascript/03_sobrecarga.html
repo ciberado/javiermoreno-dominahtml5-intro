@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html>
+	<head>
+		<script>
+        function _saludarMensaje(mensaje) {
+                console.log(mensaje);
+        }
+ 
+        function _saludarNombreMensaje(nombre, mensaje) {
+                console.log(nombre + ': ' + mensaje);
+        }
+       
+        function _saludarMensajeRepeticiones(mensaje, repeticiones) {
+                for (var i=0; i < repeticiones; i++) {
+                        _saludarMensaje(mensaje);
+                }
+        }
+       
+        function saludar(nombreOMensaje, mensajeORepeticiones) {
+                if (mensajeORepeticiones && typeof(mensajeORepeticiones) == 'number') {
+                        _saludarMensajeRepeticiones(nombreOMensaje, mensajeORepeticiones);
+                } else if (mensajeORepeticiones && typeof(mensajeORepeticiones) == 'string') {
+                        _saludarNombreMensaje(nombreOMensaje, mensajeORepeticiones);
+                } else {
+                        _saludarMensaje(nombreOMensaje);
+                }
+        }
+       
+        saludar('hola');
+        saludar('buenas', 3);
+        saludar('ey', 'Javi');
+		</script>
+	
+	</head>
+	<body>
+		
+		<h1>Disney.com</h1>
+		
+		<a id="linkDisney" href="http://www.disney.com">Disney</a>
+	
+		<p id="descripcion">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus ipsum ut lorem vestibulum sed pretium elit dictum. Nunc vitae felis ligula. Nam vel metus ut orci porta tincidunt at eget libero. Quisque ut blandit neque. Vivamus ut est elit, id aliquam nisl. Morbi blandit.
+		</p>
+
+		
+		
+	</body>
+</html>

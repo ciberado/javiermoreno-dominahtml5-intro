@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+
+<html>
+	<head>
+		<script>
+			
+			var alpha = 'ALPHA';
+			
+			function saludar(nombre, mensaje) {
+				var beta = 'BETA';
+				delta = 'DELTA';
+				mensaje = mensaje || 'Buenas tardes.';
+				console.log('Hola ' + nombre + ': ' + mensaje);
+			}
+			
+			saludar('Alice', 'Good morning');
+			console.log(alpha);
+			console.log(delta);
+			console.log(window.delta);
+			console.log(typeof(beta) == 'undefined'); 
+			// error, no está definida
+			console.log(typeof(mensaje) == 'undefined'); 
+			// error, no está definida
+			
+			console.log('Fin.');
+		</script>
+	
+	</head>
+	<body>
+		
+		<h1>Disney.com</h1>
+		
+		<a id="linkDisney" href="http://www.disney.com">Disney</a>
+	
+		<p id="descripcion">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus ipsum ut lorem vestibulum sed pretium elit dictum. Nunc vitae felis ligula. Nam vel metus ut orci porta tincidunt at eget libero. Quisque ut blandit neque. Vivamus ut est elit, id aliquam nisl. Morbi blandit.
+		</p>
+
+		
+		
+	</body>
+</html>

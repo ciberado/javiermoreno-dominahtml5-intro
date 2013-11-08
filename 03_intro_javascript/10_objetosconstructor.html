@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html>
+	<head>
+		<script>
+			
+			function Persona(nombre, apellidos, nif) {
+				console.debug(this);
+				this.nombre = nombre;
+				this.apellidos = apellidos;
+				this.nif = nif;
+			}
+			
+			var per1 = new Persona('Alice', 'Wonderland', '01234567A');
+			console.log('********************');
+			console.log(per1.nombre);
+			console.log(per1.constructor);
+			console.log(per1.__proto__);
+			
+			var per2 = new Persona('Bob', 'Bib', '12345678B');
+			console.log('********************');
+			console.log(per2.nombre);
+			console.log(per2.constructor);
+			console.log(per2.__proto__);
+			
+			console.log('********************');
+			/*window.*/Persona('Charlie', 'Chux', '23456789C');
+			console.warn(/*window.*/nombre);
+		</script>
+	
+	</head>
+	<body>
+		
+		<h1>Disney.com</h1>
+		
+		<a id="linkDisney" href="http://www.disney.com">Disney</a>
+	
+		<p id="descripcion">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus ipsum ut lorem vestibulum sed pretium elit dictum. Nunc vitae felis ligula. Nam vel metus ut orci porta tincidunt at eget libero. Quisque ut blandit neque. Vivamus ut est elit, id aliquam nisl. Morbi blandit.
+		</p>
+
+		
+		
+	</body>
+</html>

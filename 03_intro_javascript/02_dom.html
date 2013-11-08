@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+
+<html>
+	<head>
+		<script>
+			console.log(window);
+			console.log(document);
+			console.log(console);
+			console.log(window.document == document);
+			
+			//window.alert('*');
+			//alert('!'); // window es el scope del script
+			
+			// utilización de arguments
+			function saludar(mensaje) {
+				//console.log(mensaje);
+				if (arguments.length == 1) {
+					console.log(arguments[0]);
+				} else {
+					console.log(arguments[0] + ', ' + arguments[1]);
+				}
+			}
+			
+			saludar('Hola.');
+			saludar('Hola', 'Javi');
+			
+			console.log('Fin.');
+		</script>
+	
+	</head>
+	<body>
+		
+		<h1>Disney.com</h1>
+		
+		<a id="linkDisney" href="http://www.disney.com">Disney</a>
+	
+		<p id="descripcion">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus ipsum ut lorem vestibulum sed pretium elit dictum. Nunc vitae felis ligula. Nam vel metus ut orci porta tincidunt at eget libero. Quisque ut blandit neque. Vivamus ut est elit, id aliquam nisl. Morbi blandit.
+		</p>
+
+		
+		
+	</body>
+</html>

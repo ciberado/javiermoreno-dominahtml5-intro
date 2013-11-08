@@ -1,0 +1,20 @@
+﻿ <html>
+ 	<body><script>
+	
+		var semana = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
+		
+		delete semana[0];
+		
+		for (var i=0; i < semana.length; i++) {
+			console.log('Recorriendo ' + semana[i] + '.');
+		}
+	
+		console.warn(i);	// i sigue existiendo!!
+		
+		with(semana) {
+			console.log(length);
+		}
+		
+		
+	</script></body>
+ </html>
