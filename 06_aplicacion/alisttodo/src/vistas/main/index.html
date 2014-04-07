@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A List Todo :: Principal</title>
+</head>
+<body>
+    <header>
+        <h1>A List TODO</h1>
+    </header>
+    <main>
+        <form id="agregarTareaForm" action="">
+            <label for="texto" accesskey="t"><u>T</u>exto:</label>
+            <input type="text" id="texto" name="texto" tabindex="1">
+            <button name="accionAgregarTarea">+</button>
+        </form>
+        
+        <div id="mensajes"></div>
+        
+        <ol id="listaTareas">
+        </ol>
+    </main>
+    <script src="../../js/Tarea.js"></script>
+    <script src="../../js/GestionTareasService.js"></script>
+    <script src="MainCtrl.js"></script>
+    <script>
+        var ctrl = new MainCtrl();
+        ctrl.inicializar();
+    </script>
+</body>
+</html>

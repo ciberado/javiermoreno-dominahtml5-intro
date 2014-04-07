@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo jQuery DOM</title>
+</head>
+<body>
+	<h1>Demo DOM</h1>
+	
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js">
+	</script>
+	<script>
+		var lorem = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, voluptate, neque, molestias, consequatur eaque nostrum culpa amet quisquam fugit voluptas porro delectus enim officiis laudantium odit fuga voluptatibus ipsam sed? Vero, soluta est sequi fugit illum alias voluptatem aliquam voluptatum et nostrum asperiores consequatur officia consectetur doloribus provident ipsam architecto aliquid necessitatibus voluptates distinctio. Quos, quod, nam quasi deserunt nostrum vel blanditiis ipsa alias porro dolore. Maiores, aliquam, itaque, ad inventore in neque error architecto aperiam similique quis harum laudantium magnam cupiditate incidunt suscipit! Fugit, suscipit, iusto officiis ducimus deserunt nam repudiandae quod sunt est non placeat rerum inventore ullam.';
+		
+		// Mediante DOM API
+		var h2 = document.createElement('h2');
+		h2.innerHTML = 'Consectetur adipi';
+		document.querySelector('body').appendChild(h2);
+		
+		var p = document.createElement('p');
+		p.innerHTML = lorem;
+		document.querySelector('body').appendChild(p);
+		
+		$('<h2>')
+		   .text('Consectetur adipisicing elit')
+		   .appendTo('body');
+		
+		$('<p>')
+		   .text(lorem)
+		   .appendTo('body');
+		
+		
+		$('p').each(function(idx, pElem) {
+			console.log('El párrafo número %i mide %i letras.',
+				idx, $(pElem).text().length);
+		});
+		
+		
+		
+		
+	</script>
+	
+</body>
+</html>

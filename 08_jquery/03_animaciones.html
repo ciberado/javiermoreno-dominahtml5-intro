@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Demo Animaciones</title>
+</head>
+<body>
+	<h1>Demo animación</h1>
+	
+	<p>23.45€</p>
+	
+	<form>
+		<button>Púlsame</button>
+	</form>	
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js">
+	</script>
+	<script>
+		var actualizarCotizacion = function() {
+			$('h1').animate({
+				'font-size' : '600%'
+			}, 2000);
+			
+			$('p').fadeOut(1000, function() {
+				$('p').text('34.8€');
+			});
+			$('p').fadeIn(1000);
+		};
+	
+		var inicializar = function() {
+			$('button').click(function(evt) {
+				actualizarCotizacion();
+				evt.preventDefault();
+			});
+		};
+		
+		
+		$(document).ready(function() {
+			inicializar();		
+		});
+		
+		
+	</script>
+
+	
+</body>
+</html>
+
+
+
+
+

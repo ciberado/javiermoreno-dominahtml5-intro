@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		div {
+			border : 1px dotted #000;
+			margin : 2px;
+			padding : 2px;
+		}
+		#anterior  { background-color : #bbb }
+		#posterior  { background-color : #ccc }
+		#contenedor  { 
+			position : relative;
+			background-color : #ddd; 
+		}
+		#a  { background-color : #aac } 
+		#b  { 
+			position: absolute;
+			background-color : #aca; 
+			top: 40px;
+			left : 80px;
+		}
+		#c  { background-color : #caa }
+		
+		
+	</style>
+</head>
+<body>
+	<h1>Absolute!</h1>
+	<!--
+	div#anterior{Anterior}+
+	(div#contenedor{Contenedor}>div#a{a}+div#b{b}+div#c{c})+
+	div#posterior{Posterior}
+	-->
+	<div id="anterior">Anterior</div>
+	<div id="contenedor">Contenedor
+		<div id="a">a</div>
+		<div id="b">b</div>
+		<div id="c">c</div>
+	</div>
+	<div id="posterior">Posterior</div>
+	
+</body>
+</html>

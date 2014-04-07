@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objetos Abstracción</title>
+</head>
+<body>
+	<script>
+		var Persona = function(nombre) {
+			this.nombre = nombre;
+		};
+		
+		Persona.prototype.saludar = function() {
+			console.log('Hola, soy %s.', this.nombre);
+		};
+		
+		var Empleado = function(nombre, sueldoBase) {
+			Persona.apply(this, [nombre]);
+			this.sueldoBase = sueldoBase;
+		};
+		
+		Empleado.prototype = new Persona();
+		Empleado.prototype.constructor = Empleado;
+		
+		
+		Empleado.prototype.calcularSueldo = function() {
+			return this.sueldoBase * 1.5;
+		};
+		
+		var perAlice = new Persona('Alice');
+		perAlice.saludar();
+		
+		var empBob = new Empleado('Bob', 25000);
+		console.log(empBob.nombre);
+		console.log(empBob.calcularSueldo());
+		empBob.saludar();
+		
+		
+		
+	</script>	
+</body>
+</html>
+
+
+
+
+
+

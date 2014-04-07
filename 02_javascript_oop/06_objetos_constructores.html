@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		
+		var saludarImpl = 
+		
+		var Empleado = function(nombre, sueldoBase) {
+			this.nombre = nombre;
+			this.sueldoBase = sueldoBase;
+			
+			this.saludar = function() {
+				console.log('Hola, soy ' + this.nombre);				
+			}
+		};
+		
+		var empAlice = new Empleado('Alice', 25000); 
+		var empBob = new Empleado('Bob', 20000);
+		
+		var total =  empAlice.sueldoBase + empBob.sueldoBase;
+		console.log('Sueldos: ' + total);
+		
+		empAlice.saludar();
+		empBob.saludar();
+		
+	</script>
+</body>
+</html>

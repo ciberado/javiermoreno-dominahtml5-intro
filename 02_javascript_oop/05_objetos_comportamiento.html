@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+	
+	
+		var emp = {		
+			nombre : 'Alice',
+			sueldoBase : 32000,
+			saludar : function() {		
+				console.log('hola, soy ' + this.nombre);
+			}, 
+			calcularSueldo : function() {
+				var resultado = this.sueldoBase * 1.5;
+				return resultado;
+			},
+		};
+		
+		console.log(emp.saludar.length);
+		emp.saludar();
+		var sueldoTotal = emp.calcularSueldo();
+		console.log('El sueldo es: ' + sueldoTotal);
+	
+		window.xxx = emp.saludar;
+		nombre = 'amigo';
+		window.xxx();
+	
+	
+	
+	
+	
+	
+	</script>
+	
+	
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Websockets</title>
+</head>
+<body>
+    <h1>Demo Websockets</h1>
+    <p>Pulsa el botón para iniciar y parar la demo.</p>
+    
+    <form>
+        <button>Púlsame</button>
+    </form>
+    <div id="respuesta"></div>
+    
+    <script>        
+        var Ctrl = function() {
+            var self = this;
+            this._ws = null;
+            this._button = document.querySelector('form > button');
+            this._button.addEventListener('click', function(evt) {
+                evt.preventDefault();
+                if (self._ws) {
+                    self.desconectar();
+                } else {
+                    self.conectar();
+                }
+            });
+            this._output = document.querySelector('#respuesta');
+        };
+        
+        Ctrl.prototype.conectar = function() {
+            var self = this;
+            this.mostrar('Estableciendo conexión.');
+            this._ws = new WebSocket("ws://echo.websocket.org");
+            this._ws.onopen = function(evt) {
+                self.mostrar('Conexión abierta.');
+                self._tick();
+            };
+            this._ws.onclose = function(evt) {
+                self.mostrar('Conexión cerrada.');
+            };
+            this._ws.onerror = function(evt) {
+                self.mostrar('Error: ' + evt.data);
+            };
+            this._ws.onmessage = function(evt) {
+                self.mostrar('Datos recibidos: ' + evt.data);
+            };
+        };
+        
+        Ctrl.prototype.desconectar = function() {
+            this._ws.close();
+            this._ws = null;
+        };
+        
+        Ctrl.prototype._tick = function() {
+            var self = this;
+            if (this._ws) {
+                this._ws.send(new Date().toString());
+                window.setTimeout(function() {
+                    self._tick();
+                }, 1000);
+            };
+        };
+        
+        Ctrl.prototype.mostrar = function(mensaje) {
+            this._output.innerHTML += '<p>' + mensaje + '</p>';
+        };
+        
+        window.addEventListener('load', function() {
+            new Ctrl();            
+        });
+        
+    </script>
+</body>
+</html>

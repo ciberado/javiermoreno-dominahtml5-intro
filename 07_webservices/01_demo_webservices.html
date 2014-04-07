@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo Webservices</title>
+</head>
+<body>
+	<h2>Demo</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem maiores aperiam obcaecati consequuntur ex nisi deserunt quibusdam placeat maxime reprehenderit. Blanditiis, modi, necessitatibus, error dolores natus omnis illum veritatis cupiditate voluptates ducimus dignissimos culpa minus quo voluptatem eum asperiores aliquid dicta laborum labore alias. Porro, sint, aliquam, minus, tempora incidunt totam sed optio officiis magni doloremque molestias fugit enim eos obcaecati vero repellat maxime dolore itaque voluptatibus dicta. Minima, delectus eos deserunt voluptatibus culpa sapiente facilis corporis. Error, officia, explicabo, eum ipsum temporibus quasi molestiae eveniet natus ea amet itaque rem quia mollitia eaque minus adipisci maxime. Dolore, odit, in?</p>
+	<form>
+		<button>Púlsame</button>
+	</form>
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js">
+	</script>
+	<script>
+		var guardarNuevaTarea = function(tarea) {
+			var url = 'http://localhost/tareas.json';
+			var deferred = $.post(url, {
+				'data' : JSON.stringify(tarea) 
+			});
+			return deferred;
+		};
+	
+	
+		var obtenerTareasDesdeServidor = function() {
+			var url = 'http://localhost/tareas.json';
+			var deferred = $.getJSON(url);	
+			deferred.done(function(tareas) {
+				console.log('Primer done', tareas);
+			});
+			deferred.done(function(tareas) {
+				console.log('Segundo done', tareas);
+			});
+			deferred.fail(function(tareas) {
+				console.log('Primer fail', tareas);
+			});
+			deferred.always(function(tareas) {
+				console.log('Primer always', tareas);
+			});
+			
+			return deferred.promise();
+		};
+		
+		var inicializar = function() {
+			$('button').click(function(evt) {
+				var promise = obtenerTareasDesdeServidor();
+				promise.done(function(tareas) {
+					alert(JSON.stringify(tareas));
+				});
+				evt.preventDefault();
+			});
+		
+			$(document).ajaxStart(function() {
+				window.alert('Iniciando comunicación.');
+			});
+			$(document).ajaxComplete(function() {
+				window.alert('Finalización comunicación.');
+			});
+			
+		
+		};
+		
+		$(document).ready(function(evt) {
+			inicializar();
+		});
+		
+		
+	</script>
+</body>
+</html>

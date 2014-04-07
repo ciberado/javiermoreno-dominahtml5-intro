@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo Objetos Literales</title>
+</head>
+<body>
+	<script>
+		
+		var emp1 = {};
+		emp1.nombre = 'Alice';
+		emp1.sueldoBase = 1000; 
+		
+		console.log(emp1['nombre']);
+		console.log(emp1.sueldoBase);
+		console.log(emp1.colorOjos);
+		emp1.colorOjos = 'Verde';
+		console.log(emp1.colorOjos);
+		
+		console.log('**********************');
+		
+		var emp2 = {
+			'nombre' : 'Bob',
+			'sueldoBase' : 1000,
+			'colorOjos' : 'Rojos'		
+		};
+		
+		console.log(emp2.nombre);
+		console.log(emp2['sueldoBase']);
+		
+		for (var nomProp in emp2) {
+			console.log('La prop ' + nomProp + ' es ' + emp2[nomProp]);
+
+		}
+		
+		
+		
+	
+	</script>	
+</body>
+</html>
+
+
+
+
+
+
+
+
+

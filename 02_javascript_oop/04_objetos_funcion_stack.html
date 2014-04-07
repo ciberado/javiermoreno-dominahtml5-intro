@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		
+		var saludar = (function(nombre) {
+			nombre = nombre || 'amigo';
+		
+			console.log('********************');
+			if (arguments.length == 1) {
+				console.log('Buenos días, ' + nombre);
+			} else {
+				console.log(nombre + ' dice: ');
+				for (var i=1; i < arguments.length; i++) {
+					var mensaje = 'Hola, ' + arguments[i];
+					console.log(mensaje);
+				}
+			}
+			console.log('********************');
+		});
+	
+		console.log(saludar.length);	
+		
+		saludar('Alice', 'Dave', 'Eleonor');
+		saludar('Bob');
+		
+		
+		var winki = saludar;
+		console.log(winki.length);
+		winki('Charlie');
+		
+		console.log('********************');
+		console.log(saludar);
+		
+		
+	
+	</script>
+	
+</body>
+</html>

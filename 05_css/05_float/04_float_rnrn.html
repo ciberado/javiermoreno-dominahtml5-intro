@@ -1,0 +1,49 @@
+<html>
+	<head>
+        <title>Demo float css: left none none none</title>
+        <meta charset="utf-8">
+        <style>
+            div {
+                border: 1px dotted #000;
+                margin: 2px;
+                padding : 2px;
+            }
+            #before {
+                background-color : #bbb;
+            }
+            #parent {
+                background-color : #ccc;
+            }
+            #after {
+                background-color : #ddd;
+            }
+            #a {
+                background-color : #acc;
+            }
+            #b {
+                background-color : #cac;
+            }
+            #c {
+                background-color : #cca;
+            }
+            
+            #a, #c { 
+               float: right; 
+            }
+            
+        </style>
+    </head>
+    <body>        
+    <div id="before">before</div>
+    <div id="parent">
+        Lorem ipsum dolor sit amet.
+        <img id="a" src="http://lorempixel.com/100/100/cats/1" >
+        <img id="b" src="http://lorempixel.com/100/100/cats/2" >
+        <img id="c" src="http://lorempixel.com/100/100/cats/3" >
+        <img id="d" src="http://lorempixel.com/100/100/cats/4" >
+        Aliquam viverra, nibh id commodo interdum.
+    </div>
+    <div id="after">after</div>
+
+    </body>
+</html>

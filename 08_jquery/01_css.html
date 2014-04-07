@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Demo jQuery CSS</title>
+</head>
+<body>
+	<h1>Demo jQuery CSS</h1>
+	
+	<!-- start slipsum code -->
+
+	<h2>I gotta piss</h2>
+	<p>Do you see any Teletubbies in here? Do you see a slender plastic tag clipped to my shirt with my name printed on it? Do you see a little Asian child with a blank expression on his face sitting outside on a mechanical helicopter that shakes when you put quarters in it? No? Well, that's what you see at a toy store. And you must think you're in a toy store, because you're here shopping for an infant named Jeb. </p>
+
+	<h2>No, motherfucker</h2>
+	<p>Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends. </p>
+
+	<h2>Are you ready for the truth?</h2>
+	<p>Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing. </p>
+
+	<h2>No man, I don't eat pork</h2>
+	<p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men. Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children. And I will strike down upon thee with great vengeance and furious anger those who would attempt to poison and destroy My brothers. And you will know My name is the Lord when I lay My vengeance upon thee. </p>
+
+	<!-- please do not remove this line -->
+
+	<div style="display:none;">
+	<a href="http://slipsum.com">lorem ipsum</a></div>
+
+	<!-- end slipsum code -->
+	
+	<script src="http://code.jquery.com/jquery-1.11.0.min.js">
+	</script>
+	<script>
+		// manipulación css con DOM
+		var h2Elems = document.querySelectorAll('h2:nth-of-type(odd)');
+		for (var i=0; i < h2Elems.length; i++) {
+			var elem = h2Elems[i];
+			elem.style.color = 'pink';
+		}
+		
+		// manipulación css con jQuery
+		
+		$('p') 
+		  .css('color', 'violet')
+		  .css('background-color', '#fff0f0');
+		  
+		console.log($('p').css('color'));
+		
+		$('p')
+		  .css({
+			'text-decoration' : 'underline',
+			'text-transform' : 'capitalize'
+		  });
+		  
+        $('html').attr('lang', 'es');
+		console.log($('html').attr('lang'));
+		
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

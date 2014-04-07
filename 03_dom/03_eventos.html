@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Demo DOM</title>
+</head>
+<body>
+<!--
+	header>(h1{Demo DOM}+(ol>(li>a[href="#"]{Opcion})*4))
+-->
+	<header>
+		<h1>Demo DOM<h1>
+		<nav>
+		<ol>
+			<li><a href="#">Opcion</a></li>
+			<li><a href="#">Opcion</a></li>
+			<li><a href="#">Opcion</a></li>
+			<li><a href="#">Opcion</a></li>
+		</ol>
+		</nav>
+	</header>
+	<!--
+	(main>p#descripcionPantalla{Lorem}+p{Lorem}*4)+footer{2014}
+	-->
+	<main>
+		<p id="descripcionPantalla">Look, just because I don't be givin' no man a foot massage don't make it right for Marsellus to throw Antwone into a glass motherfuckin' house, fuckin' up the way the nigger talks.</p>
+		<p>fuckin' up the way the nigger talks. Motherfucker do that shit to me, he better paralyze my ass, 'cause I'll kill the motherfucker, know what I'm sayin'?</p>
+		<p>The path of the righteous man is beset on all sides by the iniquities of the selfish and the tyranny of evil men.</p>
+		<p> Blessed is he who, in the name of charity and good will, shepherds the weak through the valley of darkness, for he is truly his brother's keeper and the finder of lost children.</p>
+	</main>
+	<footer>
+		2014
+	</footer>
+	
+	<script>
+		var pElem = document.querySelector('#descripcionPantalla');
+		
+		pElem.onclick = function(evt) {
+			alert('RGHHHHHHH!');
+		};
+		
+		var mainElem = document.querySelector('main');
+	
+		
+		pElem.addEventListener('click', function(evt) {
+			alert('Hola, soy ' + this.nodeName);
+		}, true);
+	
+		mainElem.addEventListener('click', function(evt) {
+			alert('Ey, soy el main: ' + this.nodeName);
+			//evt.stopPropagation();
+		}, true);
+	
+	
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
+
+
+
+
+

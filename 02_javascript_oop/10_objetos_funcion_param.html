@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var colaEjecucion = function(nuevasTareas) {
+			for (var i=0; i < nuevasTareas.length; i++) {
+				var tareaActual = nuevasTareas[i];
+				tareaActual();
+			}
+		};
+		
+		var t1 = function() {
+			console.log('Soy la tarea 1.');
+		};
+		
+		var t2 = function() {
+			console.log('Soy la tarea 2.');
+		};
+		
+		colaEjecucion([t1, t2]);
+		
+		colaEjecucion([
+			function() {
+				console.log('A');
+			},
+			function() {
+				console.log('B');
+			},
+			function() {
+				console.log('C');
+			}		
+		]);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	</script>
+</body>
+</html>

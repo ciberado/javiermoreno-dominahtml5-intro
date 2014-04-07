@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="utf-8">
+	</head>
+    <body>
+        <nav>
+            <ol class="menu">
+                <li>Navegación 1</li>
+                <li>Navegación 2</li>
+                <li>Navegación 3</li>
+                <li>Navegación 4</li>
+            </ol>
+        </nav>
+		<h1>Formularios</h1>
+		<h2>html5 power</h2>
+
+        <p>Lorem ipsum dolor sit amet, hola mundo vestrum appellas fortunae civitatem auri in fuerat est se ad quia ad te in deinde cupis hominem armatis exanimem scientiam pervenisset afferte Apollonius ut sua etiam esse in fuerat accidens quam aniculae morsque nutricem rex</p>
+    	   
+        <form method="post" action="ok.html">
+            <label for="txtCampoObligatorio" accesskey="o" tabindex="1">Obligatorio:</label>
+            <input id="txtCampoObligatorio" name="campoObligatorio"
+            	   type="text" required  >
+            <br/>
+            Email:
+            <input type="email" name="correo"
+                   placeholder="email@servidor.com"/>
+            <br/>
+            Teléfono:
+            <input type="tel" pattern="^\d{3}[- ]?\d{5}$" 
+			       placeholder="555-55555"/>
+            <br/>
+            Número:
+            <input type="number" min="0" max="9" step="1" />
+            <br/>
+            Meter:
+			<meter min="0" max="100" low="10" high="90"
+                   optimum="50" value="50">50 sobre 100</meter>
+            <br/>
+            Progress:
+            <progress max="100" value="50">Cargando...</progress>
+            <br/>
+        	   
+            Search:
+            <input type="search"  />
+        	   
+            <input type="submit" name="aceptar"
+            	   value="Aceptar" />
+        	   
+            <input type="submit" name="cancelar"
+            	   value="cancelar" formnovalidate />
+        	   
+            <input type="button" name="checkCorreo"
+            	   value="Comprobar Correo"
+                   />
+        	   
+        </form>
+    	   
+        <script>
+			
+			var checkCorreo = document.querySelector('input[name=checkCorreo]');
+			var email = document.querySelector('[name=correo]');
+			checkCorreo.addEventListener('click', function() {
+				window.alert(email.checkValidity());
+			});
+		
+		
+    	  
+            document.forms[0].onsubmit = function() {
+                var validacion = this.correo.validity;
+            	   
+                var mensaje = '';
+                for (key in validacion) {
+                   if (validacion.hasOwnProperty(key) == true) {
+                	   mensaje += key + ':' + validacion[key]
+                        	 +'\n'
+                   }
+                }                              
+                window.alert(mensaje);
+                return false;
+        
+            }
+    	    
+        </script>
+	   
+    </body>
+</html>
+

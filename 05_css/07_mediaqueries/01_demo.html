@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="viewport"
+	      content="
+			width=device-width,
+			initial-scale=1,
+			maximum-scale=1,
+			minimum-scale=1,
+			use-scalable=no		  
+		  ">
+    <meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		p {
+			background-color : yellow;
+			color : blue;			
+		}		
+		
+		p:first-letter {
+			font-size: 2em;
+		}
+		
+		img {
+			width : 100%;
+		}
+		
+		@media screen and (min-width : 361px) {
+			p {
+				background-color : black;
+				color : silver;
+			}
+			p:first-line {
+				font-weight: bold;
+			}
+		}
+	
+		@media screen and (min-width : 60em) {
+			p {
+				background-color : white;
+				color : black;
+			}
+			img {
+				max-width : 800px;
+				display : block;
+				margin : 0 auto;
+			}
+			#contenedor {
+				max-width : 60rem;
+				margin : 0 auto;
+			}
+		}
+	
+	</style>	
+</head>
+<body>
+	
+	<div id="contenedor">
+		<h1>Demo</h1>
+		
+		<img src="http://lorempixel.com/800/300/cats/4" alt="gatico"/>
+		
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, autem, odit, molestiae accusantium sint quas nostrum sequi dolorem porro aliquam facere libero ducimus repellat dolore sunt fugiat maxime atque voluptatibus nemo soluta delectus eos aut corporis sed suscipit quia deserunt. Tenetur, accusantium, distinctio eius soluta vitae alias corporis quidem reprehenderit odio aspernatur modi vero ullam rem cupiditate id ipsam ad impedit facere aperiam recusandae quam doloribus repellat laborum ipsum vel earum unde. In, labore, delectus, ipsum quas tempore cum rerum repudiandae debitis praesentium ab cumque enim dignissimos perspiciatis! Omnis, qui, harum quasi quo obcaecati amet vero. Sint, quam, sequi, distinctio, enim et maiores quae natus praesentium odio mollitia temporibus eveniet magnam labore. Modi, animi, facere eos ducimus debitis eaque provident et beatae voluptatem nostrum praesentium eius inventore illum. Magni, tempora, nam dolor ducimus ea temporibus quasi asperiores pariatur molestias dolore facilis explicabo sed. Consectetur, praesentium, id a tempore ex porro explicabo unde eaque adipisci quisquam nostrum reprehenderit! Ab, necessitatibus, tempora repellendus cupiditate veniam expedita culpa recusandae consequuntur laborum sed suscipit labore nulla fugit pariatur excepturi minima asperiores reprehenderit aliquam reiciendis repudiandae sint fugiat autem esse porro cumque non eius error sequi ad ullam quidem ipsa eaque repellat magni vitae vero!</p>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,20 @@
+body {
+	
+	background-color : black;
+	color : silver;
+	
+}
+
+li:nth-child(2) {
+	color : yellow;
+}
+
+li:nth-child(3) {
+	color : orange !important;
+}
+
+li:nth-child(4) {
+	color : red;
+}
+
+

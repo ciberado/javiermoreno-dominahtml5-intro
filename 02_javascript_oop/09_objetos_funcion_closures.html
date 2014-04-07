@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		var externa = function(paramExterno) {		
+			var localExterna = paramExterno * 2;
+			var interna = function(paramInterno) {
+				var localInterna = paramInterno * 3;
+				return localInterna * localExterna;
+			};
+		
+			return interna;
+		};
+		
+		var r10 = externa(10);
+		var r15 = externa(5);
+
+		var r20 = r10(15);
+		console.log(r20);
+		var r25 = r15(25);
+		console.log(r25);
+		
+	</script>
+</body>
+</html>

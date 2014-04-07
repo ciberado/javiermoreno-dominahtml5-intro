@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		
+		var saludar = (function(nombre) {
+			console.log('********************');
+			console.log('Hola, ' + nombre);
+			console.log('********************');
+		});
+	
+		console.log(saludar.length);	
+		var winki = saludar;
+		console.log(winki.length);
+		
+		saludar('Alice');
+		winki('Bob');
+		
+		console.log('********************');
+		console.log(saludar);
+		
+		
+	
+	</script>
+	
+</body>
+</html>
