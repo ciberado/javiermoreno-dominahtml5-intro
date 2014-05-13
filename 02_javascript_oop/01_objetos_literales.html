@@ -33,7 +33,25 @@
 
 		}
 		
+		console.log('**************************');
 		
+		var propiedad = 'color';
+		var o1 = {};
+		o1.propiedad = 'No me llamo color';
+		console.log(o1);
+		
+		var o2 = { 
+			propiedad : 'No me llamo color';
+		};
+		console.log(o2);
+		
+		var o3 = {};
+		o3['propiedad'] = 'No me llamo color';
+		console.log(o3);
+		
+		var o4 = {};
+		o4[propiedad] = 'Ey!!! la propiedad se llama \'color\'!';
+		console.log(o4);
 		
 	
 	</script>	
