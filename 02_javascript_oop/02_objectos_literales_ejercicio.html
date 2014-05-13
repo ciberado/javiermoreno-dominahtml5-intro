@@ -7,7 +7,7 @@
 <body>
 	<script>
 		
-		var emp = {
+		var emp1 = {
 			nombre : 'Alice',
 			sueldoBase : 1000,
 			direccion : {
@@ -15,16 +15,34 @@
 				poblacion : 'Wonderland',
 				codigoPostal : '55555'
 			},
+			proyectos : {
+				0 : 'White Rabbit',
+				1 : 'Red Queen',
+				2 : 'Hatter'
+            }
+		};
+		
+		var emp2 = {
+			nombre : 'Bob',
+			sueldoBase : 800,
+			direccion : {
+				calle : 'Ananas 48, Bajos',
+				poblacion : 'Underthesea',
+				codigoPostal : '34343'
+			},
 			proyectos : [
 				'White Rabbit',
 				'Red Queen',
 				'Hatter'
 			]
 		};
-	
-		console.log(emp.direccion.calle);
 		
-		console.log(emp.proyectos[0]);
+	
+		console.log(emp1.direccion.calle);		
+		console.log(emp1.proyectos[0]);
+		
+		console.log(emp2.direccion.calle);		
+		console.log(emp2.proyectos[0]);
 	
 	
 	</script>
